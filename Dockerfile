@@ -6,11 +6,9 @@ RUN yum makecache && \
     yum install -y bzip2 && \
     yum install -y wget && \
     yum install -y python36 && \
-    yum install -y epel-release && \
-    yum install -y jq && \
     yum install -y python-pip && \
     pip install --upgrade pip && \
-    pip install yq && \
+    pip install jq yq && \
     wget -O docker.tgz https://download.docker.com/linux/static/stable/x86_64/docker-19.03.1.tgz && \
     gunzip -c docker.tgz | tar xvf - && \
     mv docker/docker /usr/bin/docker && \
